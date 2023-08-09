@@ -1,0 +1,99 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.header::after {
+    content: ' ';
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url('../img/icons/more.svg');
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 2rem;
+    height: 2rem;
+}
+
+.header .myPhoto {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.header .title {
+    font-family: 'Neue Machina', sans-serif;
+    text-align: center;
+}
+
+.header .cardInfo {
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.header .cardInfo p {
+    margin: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 1.125rem;
+}
+
+.header .cardInfo p::before {
+    content: '';
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    margin-right: 0.8rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: .5rem;
+}
+
+.cardInfo .user::before {
+    background-image: url('../img/icons/user.svg');
+}
+
+.cardInfo .linkedin::before {
+    background-image: url('../img/icons/linkedin.svg');
+
+}
+
+.cardInfo .phone::before {
+    background-image: url('../img/icons/phone.svg');
+}
+
+.cardInfo .location::before {
+    background-image: url('../img/icons/location.svg');
+}
+
+@media screen and (min-width: 768px) {
+    .header {
+        display: grid;
+        grid-template-areas: "photo title"
+            "photo cardInfo";
+    }
+
+    .header .myPhoto {
+        grid-area: photo;
+        margin: 0 auto;
+    }
+
+    .header .title {
+        grid-area: title;
+        text-align: start;
+        max-width: 210px;
+    }
+
+    .header .cardInfo {
+        grid-area: cardInfo;
+    }
+}

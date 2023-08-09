@@ -1,0 +1,32 @@
+.portfolio {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.portfolio li {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 1rem 0;
+}
+
+.portfolio li .title {
+    font-weight: 700;
+    margin-bottom: .5rem;
+}
+.portfolio li .title::before {
+    content: " ";
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    margin-right: 0.5rem;
+    background-image: url('../img/icons/github.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+}

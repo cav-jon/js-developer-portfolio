@@ -1,0 +1,21 @@
+.carreer {
+    display: flex;
+    flex-direction: column;
+}
+.carreer li {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.carreer .period::before {
+    content: " ";
+        display: inline-block;
+        width: 1rem;
+        height: 1rem;
+        margin-right: 0.5rem;
+        background-image: url('../img/icons/calendar.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+}
